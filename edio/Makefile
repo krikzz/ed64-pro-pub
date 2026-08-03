@@ -4,8 +4,8 @@ OUTPUT	    = edio
 all:$(OUTPUT).z64
 .PHONY: all
 
-N64_INST    = E:/devtools/n64-toolchain
-N64_ROOTDIR = E:/devtools/n64-toolchain
+# N64_INST    = E:/devtools/n64-toolchain
+# N64_ROOTDIR = E:/devtools/n64-toolchain
 MAKEFLAGS   = -j
 
 BUILD_DIR = build
