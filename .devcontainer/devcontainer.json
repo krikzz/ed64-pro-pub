@@ -1,0 +1,25 @@
+{
+    "name": "ED64-Pro-edio-N64",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "mounts": [
+        "source=ed64-pro-edio-n64-bashhistory,target=/commandhistory,type=volume"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder}/edio/,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "rm -rf ./libdragon && git clone https://github.com/dragonminded/libdragon -b preview --depth 1 && cd ./libdragon && make clobber -j && make libdragon tools -j && make install tools-install -j",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "git.ignoredRepositories": [
+                    "libdragon"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+name: Build ED64 EDIO Example ROM
+ 
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        name: Checkout Code
+
+      - uses: devcontainers/ci@v0.3
+        name: Build N64 ROM using devcontainer
+        with:
+          configFile: ./.devcontainer/devcontainer.json
+          push: never
+          runCmd: |
+            make all
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ED64-EDIO-SAMPLE_N64_ROM
+          path: ${{ github.workspace }}/edio/edio.z64

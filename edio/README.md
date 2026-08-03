@@ -1,5 +1,7 @@
 # EDIO Sample
+Built using libdragon.
 
+## Features
 This application contains examples of the following features:
 
 - Debug `printf` over USB
