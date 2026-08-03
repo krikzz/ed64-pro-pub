@@ -1,18 +1,18 @@
 # EverDrive-64 PRO Dev Sources
 
-This repository contains libraries, tools and code examples for development targeting EverDrive-64 PRO.
+This repository contains libraries, tools and code examples for development targeting the [EverDrive-64 PRO](https://krikzz.com/our-products/cartridges/everdrive-64-pro.html).
 
-## Contents
+Other supplementary resources are available from [here](https://krikzz.com/pub/support/everdrive-64/pro-series/)
 
-| Path | Description |
-|---|---|
-| `/edio` | Examples of low level cartridge hardware access: SD card, USB, memory, etc. |
-| `/edio-cmd` | USB command scripts for the `/edio` application. |
-| `/edlink.py` | Basic cross-platform launcher script for `edlink.exe`. Requires Mono runtime on Linux and macOS. |
-| `/edlink.exe` | USB utility for communication with EverDrive over USB. |
+## Repo Contents
+
+| Path                      | Description   |
+|---                        |---            |
+| [edio](./edio/)           | Example ROM for low level cartridge hardware access: SD card, USB, memory, etc. |
+| [edio-cmd](./edio-cmd/)   | Test USB command scripts for the [edio](./edio/) ROM. |
+| [edlink.py](./edlink.py)  | Basic cross-platform launcher script for [edlink.exe](./edlink.exe). Requires Mono runtime on Linux and macOS. |
+| [edlink.exe](./edlink.exe)| USB utility for communication with EverDrive over USB, latest application source code is available [here](https://github.com/krikzz/edlink). |
 
 ---
 
-<p align="center">
-    <img src="ed64.jpg" alt="EverDrive-64 PRO">
-</p>
+![EverDrive-64 PRO](./ed64.jpg)
